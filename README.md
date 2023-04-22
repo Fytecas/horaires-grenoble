@@ -8,7 +8,7 @@ Les données collectées sont utilisées uniquement dans le but de fournir les h
 
 ## Conservation des données
 
-Les données collectées sont conservées uniquement pendant la durée nécessaire pour fournir les horaires des trams et des bus à l'utilisateur. Les données ne sont pas conservées au-delà de cette période et sont supprimées de manière sécurisée.
+Les données collectées sont conservées uniquement pendant la durée nécessaire pour fournir les horaires des trams et des bus à l'utilisateur. Les données sont supprimées dés l'arret de l'application, elle ne sont pas stockées dans des fichiers.
 
 ## Sécurité des données
 
@@ -20,7 +20,7 @@ Les données collectées ne sont pas partagées avec des tiers, sauf si cela est
 
 ## Consentement de l'utilisateur
 
-En utilisant l'application, l'utilisateur consent à la collecte, à l'utilisation et à la conservation des données conformément aux présentes règles de confidentialité.
+En utilisant l'application, l'utilisateur consent à la collecte et à l'utilisation conformément aux présentes règles de confidentialité.
 
 ## Droits de l'utilisateur
 
