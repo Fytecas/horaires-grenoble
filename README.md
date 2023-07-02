@@ -1,33 +1,37 @@
-## Collecte limitée des données
+## Règles de Confidentialité
 
-L'application collecte uniquement les données nécessaires pour fournir les horaires des trams et des bus de l'agglomération grenobloise à l'utilisateur. Cela inclut les informations sur les lignes de tramway et de bus, les arrêts, les horaires et les dates et heures de départ.
+Dernière mise à jour : 2 juillet 2023
 
-## Utilisation des données
+Merci d'utiliser l'application "Horaires Trams/bus Grenoble" (ci-après dénommée "l'application"). Cette politique de confidentialité décrit comment l'application collecte, utilise et partage vos informations lorsque vous l'utilisez.
 
-Les données collectées sont utilisées uniquement dans le but de fournir les horaires des transports en commun à l'utilisateur et de les afficher dans l'application. Les données ne sont pas utilisées à d'autres fins, telles que la publicité, le marketing ou la vente à des tiers.
+### Informations collectées
 
-## Conservation des données
+L'application collecte les données suivantes :
 
-Les données collectées sont conservées uniquement pendant la durée nécessaire pour fournir les horaires des trams et des bus à l'utilisateur. Les données sont supprimées dés l'arret de l'application, elle ne sont pas stockées dans des fichiers.
+- Heure et date actuelles de votre appareil.
 
-## Sécurité des données
+De plus, l'utilisateur a la possibilité de fournir les informations suivantes à l'application :
 
-L'application met en œuvre des mesures de sécurité appropriées pour protéger les données collectées contre tout accès non autorisé, toute divulgation, altération ou destruction. Cela inclut l'utilisation de protocoles de communication sécurisés et de pratiques de stockage sécurisées.
+- Date
+- Heure
+- Selection d'une ligne de transport de la ville de Grenoble
 
-## Partage des données
+### Utilisation des données
 
-Les données collectées ne sont pas partagées avec des tiers, sauf si cela est nécessaire pour fournir les horaires des trams et des bus à l'utilisateur. Par exemple, les données peuvent être partagées avec l'API Mobilité M pour obtenir les horaires en temps réel.
+L'application utilise les informations collectées dans le but unique de récupérer les horaires en temps réel des transports en commun de la ville de Grenoble. Ces données sont partagées avec le service data.mobilites-m.fr, qui fournit les horaires en temps réel.
 
-## Consentement de l'utilisateur
+### Stockage et partage des données
 
-En utilisant l'application, l'utilisateur consent à la collecte et à l'utilisation conformément aux présentes règles de confidentialité.
+Aucune des informations collectées par l'application n'est stockée ou partagée avec des tiers autres que data.mobilites-m.fr. Les informations fournies par l'utilisateur sont transmises uniquement à des fins de récupération des horaires en temps réel.
 
-## Droits de l'utilisateur
+### Sécurité
 
-L'utilisateur a le droit d'accéder à ses données personnelles collectées par l'application, de les corriger si elles sont inexactes, de les supprimer si elles ne sont plus nécessaires et de s'opposer à leur utilisation pour des finalités autres que celles pour lesquelles elles ont été collectées.
+Nous prenons des mesures appropriées pour protéger vos informations contre tout accès non autorisé, utilisation abusive ou divulgation.
 
-## Mise à jour des règles de confidentialité
+### Modifications de la politique de confidentialité
 
-Les règles de confidentialité peuvent être mises à jour de temps en temps pour refléter les changements dans les pratiques de collecte et d'utilisation des données. Les utilisateurs seront informés des mises à jour importantes des règles de confidentialité.
+Nous nous réservons le droit de mettre à jour cette politique de confidentialité à tout moment. Toute modification sera affichée dans cette section.
 
-En utilisant cette application, vous acceptez les règles de confidentialité mentionnées ci-dessus. Si vous avez des questions ou des préoccupations concernant la confidentialité des données, veuillez nous contacter à [adresse e-mail ou autre moyen de contact].
+### Nous contacter
+
+Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité, veuillez nous contacter à l'adresse suivante : [dario.lehy@gmail.com](mailto:dario.lehy@gmail.com).
