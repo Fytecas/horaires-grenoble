@@ -4,6 +4,8 @@ Dernière mise à jour : 2 juillet 2023
 
 Merci d'utiliser l'application "Horaires Trams/bus Grenoble" (ci-après dénommée "l'application"). Cette politique de confidentialité décrit comment l'application collecte, utilise et partage vos informations lorsque vous l'utilisez.
 
+Cette application n'est pas une application gouvernementale ou officiel, elle utilise le réseau public data.mobilites-m.fr pour fournir les horaires en temps réel des transports en communs de la ville de Grenoble.
+
 ### Informations collectées
 
 L'application collecte les données suivantes :
