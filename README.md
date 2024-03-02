@@ -16,7 +16,7 @@ De plus, l'utilisateur a la possibilité de fournir les informations suivantes �
 
 - Date
 - Heure
-- Selection d'une ligne de transport de la ville de Grenoble
+- Selection d'une ligne de transport/arret de la ville de Grenoble
 
 ### Utilisation des données
 
