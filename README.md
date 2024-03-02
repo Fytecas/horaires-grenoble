@@ -1,6 +1,6 @@
 ## Règles de Confidentialité
 
-Dernière mise à jour : 2 juillet 2023
+Dernière mise à jour : 2 mars 2024
 
 Merci d'utiliser l'application "Horaires Trams/bus Grenoble" (ci-après dénommée "l'application"). Cette politique de confidentialité décrit comment l'application collecte, utilise et partage vos informations lorsque vous l'utilisez.
 
