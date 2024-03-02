@@ -1,0 +1,37 @@
+{
+  "expo": {
+    "name": "Horaires Grenoble",
+    "slug": "horaires-grenoble",
+    "version": "3.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "versionCode": 8,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+      },
+      "package": "fr.dario.horaires_tram_grenoble"
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "48a7e83f-3035-4efb-945a-2a2262f366be"
+      }
+    },
+    "owner": "pixidev"
+  }
+}
