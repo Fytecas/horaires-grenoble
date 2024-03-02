@@ -1,6 +1,7 @@
 import { A } from "@expo/html-elements";
 import React, {  } from "react";
 import { View, StyleSheet, Text } from "react-native";
+import * as StoreReview from 'expo-store-review';
 
 export function InfoScreen({ navigation, ...props }) {
     return (
@@ -11,6 +12,9 @@ export function InfoScreen({ navigation, ...props }) {
             <A style={{...styles.text, color: "blue"}} href="https://fytecas.github.io/horaires-grenoble/">
                 Règles de confidentialité
             </A>
+            <Text style={{...styles.text, color: "blue"}} onPress={() => StoreReview.requestReview()}>
+                Noter cette application
+            </Text>
         </View>)
   }
 
