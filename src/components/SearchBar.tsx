@@ -4,10 +4,15 @@ import { MaterialIcons } from "react-native-vector-icons";
 export function SearchBar(props: {onChangeText: (text) => any}) {
     
     return (
-        <View style={styles.container}>
+        <Pressable onPress={() => this.TextInput.focus()} style={styles.container}>
             <MaterialIcons name="search" size={26} style={styles.icon} />
-            <TextInput style={styles.input} placeholder="Rechercher..." onChangeText={props.onChangeText}/>
-        </View>
+            <TextInput 
+                ref={(input) => { this.TextInput = input; }}
+                style={styles.input} 
+                placeholder="Rechercher..." 
+                onChangeText={props.onChangeText}
+            />
+        </Pressable>
     )
 }
 

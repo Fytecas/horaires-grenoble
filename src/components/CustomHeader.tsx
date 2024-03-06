@@ -26,7 +26,7 @@ export function CustomHeader(props) {
                     )}
                 </View>
                 {!props.navigation.canGoBack() && (
-                <Pressable onPress={() => props.navigation.push("info")} style={styles.icon}>
+                <Pressable onPress={() => props.navigation.push("info")} style={styles.iconPressable}>
                     <MaterialCommunityIcons name="information" size={26} style={{...styles.icon, color: props.route.params ? props.route.params.textColor : "black"}}/>
                 </Pressable>)}
             </View>
@@ -36,7 +36,7 @@ export function CustomHeader(props) {
 
 function backIcon(props){
     return (
-        <Pressable onPress={() => props.navigation.goBack()} style={styles.icon}>
+        <Pressable onPress={() => props.navigation.goBack()} style={styles.iconPressable}>
             <MaterialCommunityIcons name="arrow-left" size={26} style={{...styles.icon, color: props.route.params ? props.route.params.textColor : "black"}}/>
         </Pressable>
     )
@@ -49,8 +49,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         borderBottomColor: "black",
         borderBottomWidth: 2,
-        paddingLeft: 8,
-        paddingRight: 8
+        paddingLeft: 10,
     },
 
     title: {
@@ -72,5 +71,10 @@ const styles = StyleSheet.create({
         width: 26, 
         height: 26,
         alignSelf: "center",
+    },
+    iconPressable: {
+        alignSelf: "center",
+        padding: 8,
+        paddingRight: 10
     }
 })

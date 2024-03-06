@@ -3,6 +3,7 @@ import { View, StyleSheet, ActivityIndicator, FlatList } from "react-native";
 import { SearchBar } from "../components/SearchBar";
 import { ItemCard } from "../components/ItemCard";
 import { getItemsData } from "../api";
+import { CustomHeader } from "../components/CustomHeader";
 
 export function SearchScreen({ navigation }) {
   const [data, setData] = useState([]);
@@ -43,6 +44,7 @@ export function SearchScreen({ navigation }) {
       <FlatList
         data={showData}
         contentContainerStyle={{ gap: 8 }}
+        showsVerticalScrollIndicator = {false}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <ItemCard
@@ -62,6 +64,7 @@ export function SearchScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     padding: 10,
+    paddingBottom: 0,
     gap: 10,
     backgroundColor: "white",
     flex: 1,
