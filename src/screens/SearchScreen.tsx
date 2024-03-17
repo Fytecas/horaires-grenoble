@@ -3,7 +3,6 @@ import { View, StyleSheet, ActivityIndicator, FlatList } from "react-native";
 import { SearchBar } from "../components/SearchBar";
 import { ItemCard } from "../components/ItemCard";
 import { getItemsData } from "../api";
-import { CustomHeader } from "../components/CustomHeader";
 
 export function SearchScreen({ navigation }) {
   const [data, setData] = useState([]);

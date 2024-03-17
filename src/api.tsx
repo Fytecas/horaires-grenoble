@@ -3,14 +3,14 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const apiUrl = "https://data.mobilites-m.fr/api"
 
-export async function getItemsData(){
+export async function getItemsData(update?: boolean){
     const value = await AsyncStorage.getItem('data')
-    if (value !== null) {
-        // console.log("Got stored data.");
+    if (value !== null && !update) {
+        console.log("Got stored data.");
 
         return JSON.parse(value)
     } else {
-        // console.log("Stored data were not find, getting it...")
+        console.log("Stored data were not find, getting it...")
         const response = await axios.get(`${apiUrl}/routers/default/index/routes`)
 
         const data = {stops: [], lines: []}
@@ -65,10 +65,50 @@ export async function getTimeByLine(code: String, timestamp?: number) {
         i++
     }
 
-    // console.log(result);
-    
+    // // console.log(result);
+    // let result = [];
 
-    return result
+    // const stopsResponse = await axios.get(`${apiUrl}/routers/default/index/routes/${code}/clusters`);
+    // const stops = stopsResponse.data;
+
+    // let dests = {};
+
+    // for (let i = 0; i < stops.length; i++) {
+    //     const response = await axios.get(`https://data.mobilites-m.fr/api/routers/default/index/clusters/${stops[i]["code"]}/stoptimes`, {
+    //         headers: {
+    //             origin: 'horaires_grenoble_dario_lehy'
+    //         },
+    //         params: {
+    //             route: code
+    //         }
+    //     });
+        
+    //     const responseData = response.data;
+
+    //     for (let i2 = 0; i2 < responseData.length; i2++) {
+
+    //         const desc = responseData[i2]["pattern"]["desc"];
+            
+    //         if (!dests[desc]) {
+    //             const newIndex = result.push({ destination: desc, stops: [] }) - 1;
+    //             dests[desc] = { index: newIndex };
+    //             result[newIndex].stops.push({
+    //                 code: stops[i]["code"],
+    //                 name: stops[i]["name"],
+    //                 times: responseData[i2]["times"].slice(0, 4).map((t) => t["realtimeArrival"])
+    //             });
+    //         } else {
+    //             result[dests[desc].index].stops.push({
+    //                 code: stops[i]["code"],
+    //                 name: stops[i]["name"],
+    //                 times: responseData[i2]["times"].slice(0, 4).map((t) => t["realtimeArrival"])
+    //             });
+    //         }
+    //     }
+    // }
+
+    return result;
+
 }
 
 export async function getTimesByStop(code: String) {

@@ -1,15 +1,14 @@
-import { View, Text, StyleSheet, TextInput, Pressable } from "react-native";
+import { StyleSheet, TextInput, Pressable } from "react-native";
 import { MaterialIcons } from "react-native-vector-icons";
 
 export function SearchBar(props: {onChangeText: (text) => any}) {
-    
     return (
         <Pressable onPress={() => this.TextInput.focus()} style={styles.container}>
             <MaterialIcons name="search" size={26} style={styles.icon} />
             <TextInput 
                 ref={(input) => { this.TextInput = input; }}
                 style={styles.input} 
-                placeholder="Rechercher..." 
+                placeholder="Recherche ligne/arret" 
                 onChangeText={props.onChangeText}
             />
         </Pressable>
