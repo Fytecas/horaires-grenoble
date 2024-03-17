@@ -41,7 +41,7 @@ export function LineScreen({ navigation, ...props }) {
 
     return (
         <View>
-           { loading ? (<ActivityIndicator size="large" color="black" />) : 
+          { loading ? (<ActivityIndicator size="large" color="black" />) : 
           (
             notDisponible ? (<Text style={styles.error}>Données indiponibles</Text>): (<View style={styles.container}>
               <DropdownComponent data={[...data.map((v, i) => {return {label: v.destination.name, value: i}})]} 
