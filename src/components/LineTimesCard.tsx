@@ -15,7 +15,7 @@ export function LineTimesCard(props: {color: string, textColor: string, name: st
         height: 26}}/>
             </View>
             <View style={styles.timesContainer}>
-                {props.trips.map((s, i) => <TimeContainer textColor={props.textColor} color={props.color} date={s != "|" ? DateTime.fromMillis(s*1000): null} key={i}/>)}
+                {props.trips.map((s, i) => <TimeContainer textColor={props.textColor} color={props.color} date={s != "|" ? DateTime.fromMillis(s*1000).toUTC(): null} key={i}/>)}
             </View>
         </Pressable>
     )
@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
 
     title: {
         fontSize: 22,
+        flexWrap: "wrap",
         fontWeight: "800"
     },
 

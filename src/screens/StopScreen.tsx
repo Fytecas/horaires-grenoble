@@ -49,7 +49,7 @@ export function StopScreen({ navigation, ...props }) {
                   <FlatList
                     data={Object.keys(data)}
                     contentContainerStyle={{ gap: 8 }}
-                    keyExtractor={(item) => item}
+                    keyExtractor={(item, i) => String(i)}
                     renderItem={({ item }) => (
                       <StopTimesCard
                         name={linesObj[item].name}

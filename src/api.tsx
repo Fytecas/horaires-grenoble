@@ -1,5 +1,6 @@
 import axios from 'axios';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { DateTime } from 'luxon';
 
 const apiUrl = "https://data.mobilites-m.fr/api"
 
@@ -51,11 +52,12 @@ export async function getItemsData(){
     }
 }
 
-export async function getTimeByLine(code: String, timestamp?: number) {
+export async function getTimeByLine(code: String) {
+    const timestamp =  DateTime.now().toLocal().toMillis() - (new Date().getTimezoneOffset()*60*1000)
 
-    // console.log(`Getting times for line ${code} with timestamp ${timestamp}`);
+    //console.log(`Getting times for line ${code} with timestamp ${timestamp} with offset ${new Date().getTimezoneOffset()}`);
 
-    const response: Object = Object((await axios.get(`${apiUrl}/ficheHoraires/json`, { params: { route: code, time: timestamp} })).data)
+    const response: Object = Object((await axios.get(`${apiUrl}/ficheHoraires/json`, { params: { route: code, time: timestamp } })).data)
     let result = []
 
     let i = 0
@@ -65,8 +67,7 @@ export async function getTimeByLine(code: String, timestamp?: number) {
         i++
     }
 
-    // console.log(result);
-    
+    // ds siconsole.log(result);
 
     return result
 }
