@@ -9,7 +9,7 @@ export function SearchBar(props: {onChangeText: (text) => any}) {
             <TextInput 
                 ref={(input) => { this.TextInput = input; }}
                 style={styles.input} 
-                placeholder="Rechercher..." 
+                placeholder="Recherche Ligne / Arret"  
                 onChangeText={props.onChangeText}
             />
         </Pressable>

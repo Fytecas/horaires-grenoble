@@ -29,7 +29,6 @@ export function StopTimesCard(props: {name: String, dests: {name: String, times:
                 </View>
             </View>
             ))}
-            
         </Pressable>
     )
 }

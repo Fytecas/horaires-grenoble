@@ -16,6 +16,10 @@ export function InfoScreen({ navigation, ...props }) {
                 Règles de confidentialité
                 <MaterialCommunityIcons name="arrow-top-right" style={styles.icon} size={20} />
             </A>
+            <Text style={styles.text}>
+                Les horaires affichés dans la vue de ligne sont, pour des raisons techniques, théoriques.
+                Tout les autres horaires affichés sont en temps réel.
+            </Text>
             <Text style={styles.title}>Paramètres</Text>
             <Divider bold={true} style={styles.divider}/>
             <Button
@@ -26,7 +30,7 @@ export function InfoScreen({ navigation, ...props }) {
                 disabled={loading}
                 onPress={() => {
                     setLoading(true)
-                    getItemsData(true).then(() => {
+                    getItemsData().then(() => {
                         setLoading(false)
                     })
                 }}

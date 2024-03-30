@@ -3,6 +3,8 @@ import { View, StyleSheet, ActivityIndicator, FlatList, RefreshControl, Text } f
 import DropdownComponent from "../components/DropDown";
 import { getTimeByLine } from "../api";
 import { LineTimesCard } from "../components/LineTimesCard";
+import { FontAwesome5, MaterialCommunityIcons } from "react-native-vector-icons";
+
 
 export function LineScreen({ navigation, ...props }) {
     let [ data, setData ] = useState([])
@@ -44,6 +46,7 @@ export function LineScreen({ navigation, ...props }) {
           { loading ? (<ActivityIndicator size="large" color="black" />) : 
           (
             notDisponible ? (<Text style={styles.error}>Données indiponibles</Text>): (<View style={styles.container}>
+
               <DropdownComponent data={[...data.map((v, i) => {return {label: (
                                                                           <>
                                                                             <Text>
@@ -92,5 +95,9 @@ const styles = StyleSheet.create({
     fontSize: 22,
     justifyContent: "center",
     alignSelf: "center"
+  },
+  info: {
+    fontSize: 12,
+    fontWeight: "400",
   }
 })

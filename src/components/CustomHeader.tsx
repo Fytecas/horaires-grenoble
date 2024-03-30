@@ -18,6 +18,7 @@ export function CustomHeader(props) {
                         <View style={{flexDirection: "row"}}>
                             <Text style={{...styles.title, color: props.route.params.textColor || "black"}}>{props.route.params.type == "line" ? "Ligne " : ""}</Text>
                             <Text style={{...styles.title, fontWeight: "800", color: props.route.params.textColor || "black"}}>{props.route.params.name}</Text>
+                            {props.route.name == "line" && <Text style={{...styles.title, color: props.route.params.textColor || "black"}}>{" "}(théorique)</Text>}
                         </View>
                         
                     )
