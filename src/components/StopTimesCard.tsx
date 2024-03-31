@@ -5,7 +5,7 @@ import { TimeContainer } from "./TimeContainer";
 
 
 export function StopTimesCard(props: {name: String, dests: {name: String, times: number[]}[], color: string, textColor: string, onPress: () => any}) {
-    
+    const offset = new Date().getTimezoneOffset()
     return (
         <Pressable style={{...styles.container}} android_ripple={{color: 'gray', borderless: false}} onPress={props.onPress}>
             <View style={styles.title_container}>
@@ -22,7 +22,7 @@ export function StopTimesCard(props: {name: String, dests: {name: String, times:
                     <Text style={styles.text}>{v.name}</Text>
                     <View style={styles.times_container}>
                         {v.times.map((s) => (
-                            <TimeContainer color={props.color} textColor={props.textColor} date={DateTime.fromMillis(s*1000).toUTC()}/>
+                            <TimeContainer color={props.color} textColor={props.textColor} date={DateTime.fromMillis(s*1000)}/>
                         ))}
                         
                     </View>

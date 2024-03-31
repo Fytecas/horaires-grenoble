@@ -18,7 +18,7 @@ export function InfoScreen({ navigation, ...props }) {
             </A>
             <Text style={styles.text}>
                 Les horaires affichés dans la vue de ligne sont, pour des raisons techniques, théoriques.
-                Tout les autres horaires affichés sont en temps réel.
+                Tous les autres horaires affichés sont en temps réel.
             </Text>
             <Text style={styles.title}>Paramètres</Text>
             <Divider bold={true} style={styles.divider}/>
@@ -52,7 +52,7 @@ export function InfoScreen({ navigation, ...props }) {
                 © Dario Le HY 2024
             </Text>
             <Text style={styles.text}>
-                Licenced under MIT licence
+                Licensed under MIT licence
             </Text>
         </ScrollView>)
     }

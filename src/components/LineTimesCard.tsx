@@ -5,7 +5,8 @@ import { DateTime } from "luxon"
 
 
 export function LineTimesCard(props: {color: string, textColor: string, name: string, onPress: () => any, trips: any[]}) {
-    
+    const offset = new Date().getTimezoneOffset()
+
     return (
         <Pressable style={styles.container} onPress={props.onPress} android_ripple={{color: 'gray', borderless: false}}>
             <View style={styles.textContainer}>
@@ -15,7 +16,7 @@ export function LineTimesCard(props: {color: string, textColor: string, name: st
         height: 26}}/>
             </View>
             <View style={styles.timesContainer}>
-                {props.trips.map((s, i) => <TimeContainer textColor={props.textColor} color={props.color} date={s != "|" ? DateTime.fromMillis(s*1000).toUTC(): null} key={i}/>)}
+                {props.trips.map((s, i) => <TimeContainer textColor={props.textColor} color={props.color} date={s != "|" ? DateTime.fromMillis((s )*1000).toUTC(): null} key={i}/>)}
             </View>
         </Pressable>
     )

@@ -6,9 +6,9 @@ export function TimeContainer(props: {color: string, textColor: string, date?: D
     const offset = new Date().getTimezoneOffset()
 
     if (props.date) {
-        //props.date = props.date.toLocal()
+        
         const now = DateTime.now().set({day: props.date.day, month: props.date.month, year: props.date.year}) // TODO: fix this
-        const diff = -(now.diff(props.date, ["minutes"]).minutes - offset)
+        const diff = -(now.diff(props.date, ["minutes"]).minutes)
         
         
         if (diff < 10) {
