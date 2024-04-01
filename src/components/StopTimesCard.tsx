@@ -22,7 +22,7 @@ export function StopTimesCard(props: {name: String, dests: {name: String, times:
                     <Text style={styles.text}>{v.name}</Text>
                     <View style={styles.times_container}>
                         {v.times.map((s) => (
-                            <TimeContainer color={props.color} textColor={props.textColor} date={DateTime.fromMillis(s*1000)}/>
+                            <TimeContainer color={props.color} textColor={props.textColor} date={DateTime.fromMillis(s*1000).toUTC()}/>
                         ))}
                         
                     </View>
