@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { View, StyleSheet, ActivityIndicator, FlatList } from "react-native";
 import { SearchBar } from "../components/SearchBar";
 import { ItemCard } from "../components/ItemCard";
@@ -46,19 +46,38 @@ export function SearchScreen({ navigation }) {
         showsVerticalScrollIndicator = {false}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <ItemCard
-            type={item.type == "line" ? "Ligne " : "Arret "}
-            icon={item.icon}
-            name={item.name}
-            color={item.color}
-            textColor={item.textColor}
-            onPress={() => navigation.navigate(item.type, { type: item.type, name: item.name, color: item.color, textColor: item.textColor, code: item.id })}
-          />
+          item.type === "line" ? <LineItem item={item} navigation={navigation} /> : <StopItem item={item} navigation={navigation} />
         )}
       />
     </View>
   );
 }
+
+const LineItem = memo(({ item, navigation }) => {
+  return (
+    <ItemCard
+      type="Ligne "
+      icon={item.icon}
+      name={item.name}
+      color={item.color}
+      textColor={item.textColor}
+      onPress={() => navigation.navigate("line", { type: "line", name: item.name, color: item.color, textColor: item.textColor, code: item.id })}
+    />
+  );
+});
+
+const StopItem = memo(({ item, navigation }) => {
+  return (
+    <ItemCard
+      type="Arrêt "
+      icon="bus-stop"
+      name={item.name}
+      color="white"
+      textColor="black"
+      onPress={() => navigation.navigate("stop", { type: "stop", name: item.name, color: "white", textColor: "black", code: item.id })}
+    />
+  );
+});
 
 const styles = StyleSheet.create({
   container: {

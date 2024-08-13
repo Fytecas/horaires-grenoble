@@ -4,9 +4,9 @@ import { DateTime } from 'luxon';
 
 const apiUrl = "https://data.mobilites-m.fr/api"
 
-export async function getItemsData(){
+export async function getItemsData(reload: Boolean = false) {
     const value = await AsyncStorage.getItem('data')
-    if (value !== null) {
+    if (value !== null && !reload) {
         // console.log("Got stored data.");
 
         return JSON.parse(value)
@@ -82,17 +82,16 @@ export async function getTimesByStop(code: String) {
     });
 
     const res = {}
-    // console.log(response.data);
     
     response.data.forEach((v) => {
-        let split = String(v.pattern.id).split(":")
-        // console.log(split);
-        
-        let line = split[0] + ":" + split[1]
+        let line = String(v.pattern.id).split(":")[0] + ":" + String(v.pattern.id).split(":")[1];
+
         if (!res[line]) {
             res[line] = {destinations: []}
         }
-        res[line].destinations.push({name: v.pattern.desc, times: v.times.map((t) => t.realtimeArrival)})
+
+    
+    res[line].destinations.find(d => d.name === v.pattern.desc) || res[line].destinations.push({name: v.pattern.desc, times: v.times.map((t) => t.realtimeArrival).slice(0, 4)})
     })
     return res
     

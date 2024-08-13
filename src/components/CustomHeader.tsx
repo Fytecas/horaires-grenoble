@@ -12,8 +12,6 @@ export function CustomHeader(props) {
             <View style={{...styles.container}}>
                 <View style={styles.left_container}>
                     {props.navigation.canGoBack() && backIcon(props)}
-                    
-                    
                     {props.route.params ? (
                         <View style={{flexDirection: "row"}}>
                             <Text style={{...styles.title, color: props.route.params.textColor || "black"}}>{props.route.params.type == "line" ? "Ligne " : ""}</Text>
@@ -56,6 +54,8 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 24,
         fontWeight: "500",
+        justifyContent: "center",
+        textAlignVertical: 'center',
     },
     container:{
         flexDirection: "row",

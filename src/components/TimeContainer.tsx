@@ -3,13 +3,13 @@ import { DateTime } from "luxon"
 
 
 export function TimeContainer(props: {color: string, textColor: string, date?: DateTime}) {
-    const offset = new Date().getTimezoneOffset()
-
+    
     if (props.date) {
         
-        const now = DateTime.now().set({day: props.date.day, month: props.date.month, year: props.date.year}) // TODO: fix this
-        const diff = -(now.diff(props.date, ["minutes"]).minutes)
+        const now = DateTime.now() 
+        const date = props.date
         
+        const diff = -(now.diff(date, ["minutes"]).minutes) // Todo: remove the -60 and fix the offset
         
         if (diff < 10) {
             return (
@@ -23,7 +23,7 @@ export function TimeContainer(props: {color: string, textColor: string, date?: D
             return (
             <View style={{ backgroundColor: props.color,...styles.container }}>
                 <Text style={{ color: props.textColor,...styles.text }}>
-                    {props.date.toLocaleString(DateTime.TIME_SIMPLE)}
+                    {date.toLocaleString(DateTime.TIME_SIMPLE)}
                 </Text>
             </View>
             )

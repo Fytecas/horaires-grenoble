@@ -4,6 +4,7 @@
     "slug": "horaires-grenoble",
     "version": "3.1.0",
     "orientation": "portrait",
+    "jsEngine": "hermes",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
@@ -20,7 +21,6 @@
     "android": {
       "versionCode": 11,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
       },
       "package": "fr.dario.horaires_tram_grenoble"
     },

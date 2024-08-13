@@ -30,7 +30,7 @@ export function InfoScreen({ navigation, ...props }) {
                 disabled={loading}
                 onPress={() => {
                     setLoading(true)
-                    getItemsData().then(() => {
+                    getItemsData(true).then(() => {
                         setLoading(false)
                     })
                 }}

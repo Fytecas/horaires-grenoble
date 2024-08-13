@@ -16,18 +16,17 @@ export function StopTimesCard(props: {name: String, dests: {name: String, times:
                 <MaterialCommunityIcons name={"arrow-right"} style={styles.icon} size={26}/>
             </View>
             {props.dests.map((v, i) => (
-                <View style={{flexDirection: "row"}} key={String(i)}>
-                <FontAwesome5 name={"caret-right"} style={{...styles.icon, alignSelf: "baseline", marginTop: 2, marginLeft: 10}} size={26} key={"icon" + String(i)}/>
-                <View style={styles.times_text_container} key={"times" + String(i)}>
-                    <Text style={styles.text}>{v.name}</Text>
-                    <View style={styles.times_container}>
-                        {v.times.map((s) => (
-                            <TimeContainer color={props.color} textColor={props.textColor} date={DateTime.fromMillis(s*1000).toUTC()}/>
-                        ))}
-                        
+                <View style={{flexDirection: "row"}} key={v.name + String(i)}>
+                    <FontAwesome5 name={"caret-right"} style={{...styles.icon, alignSelf: "baseline", marginTop: 2, marginLeft: 10}} size={26}/>
+                    <View style={styles.times_text_container}>
+                        <Text style={styles.text}>{v.name}</Text>
+                        <View style={styles.times_container}>
+                            {v.times.map((s) => (
+                                <TimeContainer color={props.color} textColor={props.textColor} date={DateTime.fromMillis((s + DateTime.now().set({hour:0, seconds:0, minutes:0}).toSeconds())*1000)}/>
+                            ))}
+                        </View>
                     </View>
                 </View>
-            </View>
             ))}
         </Pressable>
     )
