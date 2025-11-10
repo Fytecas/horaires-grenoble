@@ -1,3 +1,6 @@
+
+**This app is no longer on development. The code is awful, do not take it as an example.**
+
 ## Règles de Confidentialité
 
 Dernière mise à jour : 2 mars 2024
